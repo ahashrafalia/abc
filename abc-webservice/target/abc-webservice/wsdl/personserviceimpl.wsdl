@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PersonServiceImplService" targetNamespace="http://webservice.abc.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.abc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://webservice.abc.com/" schemaLocation="personserviceimpl_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getPersonById">
+    <wsdl:part name="parameters" element="tns:getPersonById">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePersonResponse">
+    <wsdl:part name="parameters" element="tns:updatePersonResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addPersonResponse">
+    <wsdl:part name="parameters" element="tns:addPersonResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listPersons">
+    <wsdl:part name="parameters" element="tns:listPersons">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePerson">
+    <wsdl:part name="parameters" element="tns:removePerson">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPersonByIdResponse">
+    <wsdl:part name="parameters" element="tns:getPersonByIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addPerson">
+    <wsdl:part name="parameters" element="tns:addPerson">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePerson">
+    <wsdl:part name="parameters" element="tns:updatePerson">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listPersonsResponse">
+    <wsdl:part name="parameters" element="tns:listPersonsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePersonResponse">
+    <wsdl:part name="parameters" element="tns:removePersonResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PersonServiceImpl">
+    <wsdl:operation name="getPersonById">
+      <wsdl:input name="getPersonById" message="tns:getPersonById">
+    </wsdl:input>
+      <wsdl:output name="getPersonByIdResponse" message="tns:getPersonByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listPersons">
+      <wsdl:input name="listPersons" message="tns:listPersons">
+    </wsdl:input>
+      <wsdl:output name="listPersonsResponse" message="tns:listPersonsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removePerson">
+      <wsdl:input name="removePerson" message="tns:removePerson">
+    </wsdl:input>
+      <wsdl:output name="removePersonResponse" message="tns:removePersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPerson">
+      <wsdl:input name="addPerson" message="tns:addPerson">
+    </wsdl:input>
+      <wsdl:output name="addPersonResponse" message="tns:addPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePerson">
+      <wsdl:input name="updatePerson" message="tns:updatePerson">
+    </wsdl:input>
+      <wsdl:output name="updatePersonResponse" message="tns:updatePersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PersonServiceImplServiceSoapBinding" type="tns:PersonServiceImpl">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getPersonById">
+      <soap:operation soapAction="urn:GetPersonById" style="document"/>
+      <wsdl:input name="getPersonById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPersonByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listPersons">
+      <soap:operation soapAction="urn:ListPersons" style="document"/>
+      <wsdl:input name="listPersons">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listPersonsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removePerson">
+      <soap:operation soapAction="urn:RemovePerson" style="document"/>
+      <wsdl:input name="removePerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removePersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPerson">
+      <soap:operation soapAction="urn:AddPerson" style="document"/>
+      <wsdl:input name="addPerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePerson">
+      <soap:operation soapAction="urn:UpdatePerson" style="document"/>
+      <wsdl:input name="updatePerson">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updatePersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersonServiceImplService">
+    <wsdl:port name="PersonServiceImplPort" binding="tns:PersonServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost:8080/abc-webservice/services/PersonServiceImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

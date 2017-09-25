@@ -1,0 +1,13 @@
+com\abc\webservice\jaxws\AddPersonResponse.class
+com\abc\webservice\jaxws\UpdatePerson.class
+com\abc\servlet\TestServlet.class
+com\abc\webservice\jaxws\ListPersonsResponse.class
+com\abc\webservice\jaxws\RemovePerson.class
+com\abc\webservice\jaxws\GetPersonById.class
+com\abc\webservice\PersonServiceImpl.class
+com\abc\webservice\jaxws\UpdatePersonResponse.class
+com\abc\webservice\PersonDao2.class
+com\abc\webservice\jaxws\ListPersons.class
+com\abc\webservice\jaxws\RemovePersonResponse.class
+com\abc\webservice\jaxws\AddPerson.class
+com\abc\webservice\jaxws\GetPersonByIdResponse.class
